@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MBTI测试</title>
+</head>
+<body>
+    <h1 align="center">MBTI职业性格测试</h1>
+    <h3>注意事项<br/> 1.请在心态平和并有充分的时间的状态下答题<br/>
+        2．请注意，题目的答案无对错之分，你不需要考虑哪个答案“应该”更好，而且不要在任何问题上思考太久，而是应该凭你心里的第一反应做出选择。<br>
+        3．如果你觉得在不同的情境里，两个答案或许都能反映你的倾向，请选择一个对于你的行为方式来说最自然、最顺畅和最从容的答案。<br>
+        4. 所有选项都默认选定第一个值，请自行修改
+    </h3>
+
+    <div>
+        <form name="examForm" action="/mbti/examServlet" method="post" onclick="return check()">
+            <b>1.当你要外出一整天，你会<br/></b>
+            <label for="1A"><input type="radio" name="a1" value="J"  id="1A" checked> A.计划你要做什么和在什么时候做</label>
+            <label for="1B"><input type="radio" name="a1" value="P"  id="1B"> B.说去就去</label> <br> <br>
+
+            <b>2.你是否<br/></b>
+            <label for="2A"><input type="radio" name="a2" value="E"  id="2A" checked> A.容易让人了解</label>
+            <label for="2B"><input type="radio" name="a2" value="I"  id="2B"> B.难于让人了解</label> <br><br>
+
+            <b>3.你认为自己是一个<br/></b>
+            <label for="3A"><input type="radio" name="a3" value="P"  id="3A" checked> A.较为随性所至的人</label>
+            <label for="3B"><input type="radio" name="a3" value="J"  id="3B"> B.较为有条理的人</label> <br><br>
+
+            <b>4.假如你是一位老师，你会选教 <br/></b>
+            <label for="4A"><input type="radio" name="a4" value="S"  id="4A" checked> A.以事实为主的课程</label>
+            <label for="4B"><input type="radio" name="a4" value="N"  id="4B"> B.涉及理论的课程</label> <br><br>
+
+            <b>5.处理许多事情上，你会喜欢<br/></b>
+            <label for="5A"><input type="radio" name="a5" value="P"  id="5A" checked> A.凭兴所至行事</label>
+            <label for="5B"><input type="radio" name="a5" value="J"  id="5B"> B.按照计划行事</label> <br><br>
+
+            <b>6.下面哪个词语更和我心意<br/></b>
+            <label for="6A"><input type="radio" name="a6" value="F"  id="6A" checked> A.仁慈慷慨的</label>
+            <label for="6B"><input type="radio" name="a6" value="T"  id="6B"> B.意志坚定的</label> <br><br>
+
+            <b>7.按照程序表做事，<br/></b>
+            <label for="7A"><input type="radio" name="a7" value="J"  id="7A" checked> A.合你心意</label>
+            <label for="7B"><input type="radio" name="a7" value="P"  id="7B"> B.令你感到束缚</label> <br><br>
+
+            <b>8.你做事多数是<br/></b>
+            <label for="8A"><input type="radio" name="a8" value="J"  id="8A" checked> A.按当天的心情</label>
+            <label for="8B"><input type="radio" name="a8" value="P"  id="8B"> B.按照计划行事</label> <br><br>
+
+            <b>9.你倾向<br/></b>
+            <label for="9A"><input type="radio" name="a9" value="F"  id="9A" checked> A.重视感情多于逻辑</label>
+            <label for="9B"><input type="radio" name="a9" value="T"  id="9B"> B.重视逻辑大于感情</label> <br><br>
+
+            <b>10.与很多人一起会<br/></b>
+            <label for="10A"><input type="radio" name="a10" value="E"  id="10A"checked> A.令你活力倍增</label>
+            <label for="10B"><input type="radio" name="a10" value="I"  id="10B"> B.令你心力憔悴</label> <br><br>
+
+            <b>11.当你有一份特别的任务，你会喜欢<br/></b>
+            <label for="11A"><input type="radio" name="a11" value="P"  id="11A"checked> A.开始前小心组织计划</label>
+            <label for="11B"><input type="radio" name="a11" value="J"  id="11B"> B.边找边须做点什么</label> <br><br>
+
+            <b>12.在大多数情况下，你喜欢立刻行动而不喜欢对各种选择进行反复斟酌<br/></b>
+            <label for="12A"><input type="radio" name="a12" value="P"  id="12A"checked> A.是</label>
+            <label for="12B"><input type="radio" name="a12" value="J"  id="12B"> B.否</label> <br><br>
+
+            <b>13.你通常<br/></b>
+            <label for="13A"><input type="radio" name="a13" value="E"  id="13A"checked> A.与人容易混熟</label>
+            <label for="13B"><input type="radio" name="a13" value="I"  id="13B"> B.比较冷静或矜持</label> <br><br>
+
+            <b>14.哪些人会更加吸引你<br/></b>
+            <label for="14A"><input type="radio" name="a14" value="N"  id="14A"checked> A.一个思想敏捷，聪颖的人</label>
+            <label for="14B"><input type="radio" name="a14" value="S"  id="14B"> B.实事求是，知识渊博的人</label> <br><br>
+
+            <b>15.大多数人会评价你是一个<br/></b>
+            <label for="15A"><input type="radio" name="a15" value="I"  id="15A"checked> A.重视自我隐私的人</label>
+            <label for="15B"><input type="radio" name="a15" value="E"  id="15B"> B.非常坦率开发的人</label> <br><br>
+
+            <b>16.在一大群人当中，通常是<br/></b>
+            <label for="16A"><input type="radio" name="a16" value="E"  id="16A"checked> A.你介绍大家认识</label>
+            <label for="16B"><input type="radio" name="a16" value="I"  id="16B"> B.别人介绍你</label> <br><br>
+
+            <b>17.哪个对于你来说是更高的赞誉<br/></b>
+            <label for="17A"><input type="radio" name="a17" value="T"  id="17A"checked> A.能力强</label>
+            <label for="17B"><input type="radio" name="a17" value="F"  id="17B"> B.富有同情心</label> <br><br>
+
+            <b>18.你喜欢花很多时间<br/></b>
+            <label for="18A"><input type="radio" name="a18" value="I"  id="18A"checked> A.一个人独处</label>
+            <label for="18B"><input type="radio" name="a18" value="E"  id="18B"> B.和别人在一起</label> <br><br>
+
+            <b>19.一般来说，你和哪种人比较合得来<br/></b>
+            <label for="19A"><input type="radio" name="a19" value="N"  id="19A"checked> A.富有想象力的人</label>
+            <label for="19B"><input type="radio" name="a19" value="S"  id="19B"> B.现实的人</label> <br><br>
+
+            <b>20.你宁愿被认为是一个什么样的人<br/></b>
+            <label for="20A"><input type="radio" name="a20" value="S"  id="20A"checked> A.实事求是的人</label>
+            <label for="20B"><input type="radio" name="a20" value="N"  id="20B"> B.机灵的人</label> <br><br>
+
+            <b>21.哪个对你来说是较高的赞誉<br/></b>
+            <label for="21A"><input type="radio" name="a21" value="F"  id="21A"checked> A.一贯感性的人</label>
+            <label for="21B"><input type="radio" name="a21" value="T"  id="21B"> B.一贯理性的人</label> <br><br>
+
+            <b>22.被批评时，你常常<br/></b>
+            <label for="22A"><input type="radio" name="a22" value="F"  id="22A"checked> A.先考虑是不是真的犯了错</label>
+            <label for="22B"><input type="radio" name="a22" value="T"  id="22B"> B.很不高兴，容易被激怒</label> <br><br>
+
+            <b>23.要做决定时，你认为比较重要的是<br/></b>
+            <label for="23A"><input type="radio" name="a23" value="T"  id="23A"checked> A.据事实衡量</label>
+            <label for="23B"><input type="radio" name="a23" value="F"  id="23B"> B.考虑他人的感受和意见</label> <br><br>
+
+            <b>24.你喜欢去<br/></b>
+            <label for="24A"><input type="radio" name="a24" value="S"  id="24A"checked> A.自己经常去的餐厅用餐</label>
+            <label for="24B"><input type="radio" name="a24" value="N"  id="24B"> B.尝试新的餐厅</label> <br><br>
+
+            <b>25.你倾向于<br/></b>
+            <label for="25A"><input type="radio" name="a25" value="P"  id="25A"checked> A.自己的工作被欣赏，即使你自己并不满意</label>
+            <label for="25B"><input type="radio" name="a25" value="J"  id="25B"> B.创造一些有长远价值的东西，但不一定需要别人知道是你做的</label> <br><br>
+
+            <b>26.你更倾向于获得<br/></b>
+            <label for="26A"><input type="radio" name="a26" value="E"  id="26A"checked> A.在自己感兴趣的领域积累丰富的经验</label>
+            <label for="26B"><input type="radio" name="a26" value="I"  id="26B"> B.积累各种各样的经验</label> <br><br>
+
+            <b>27.当你尝试了解某些事情时，一般你会<br/></b>
+            <label for="27A"><input type="radio" name="a27" value="P"  id="27A"checked> A.先了解细节</label>
+            <label for="27B"><input type="radio" name="a27" value="J"  id="27B"> B.先了解整体情况，细节容后再谈</label> <br><br>
+
+            <b>28.哪一句更能表达你的看法<br/></b>
+            <label for="28A"><input type="radio" name="a28" value="P"  id="28A"checked> A.感情用事容易犯错</label>
+            <label for="28B"><input type="radio" name="a28" value="J"  id="28B"> B.逻辑思维容易让人自以为是，因而犯错</label> <br><br>
+
+            <input type="submit" value="提交" >
+        </form>
+
+
+
+    </div>
+    <script>
+        function check() {
+            if(!confirm("确定要提交表单吗？")){
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>
